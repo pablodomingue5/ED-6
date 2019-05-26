@@ -19,7 +19,7 @@ public class Coche {
 		modelo = mo;
 		fabricante = f;
 	}
-
+		
 	public String metodo1() {
 		String resultado = "";
 		if (atrib == "Gasolina") {
