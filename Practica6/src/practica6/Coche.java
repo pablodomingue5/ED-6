@@ -38,4 +38,20 @@ public class Coche {
 		}
 		return resultado;
 	}
+	
+	public String metodoC(String modelo3, String fabricante3) {
+		String resultado="es un "+fabricante3+" "+modelo3+" y no necesita combustible.";
+		return resultado;
+	}
+
+	public String metodoB(String modelo2, String fabricante2) {
+		String resultado="es un "+fabricante2+" "+modelo2+" y gasta 1,052 euros por litro.";
+		return resultado;
+		
+	}
+
+	public String metodoA(String modelo, String fabricante) {
+		String resultado="es un "+fabricante+" "+modelo+" y gasta 1,337 euros por litro.";
+		return resultado;
+	}
 }
