@@ -5,7 +5,7 @@ public class Coche {
 	String atrib;
 	String modelo;
 	String fabricante;
-
+	
 	public Coche() {
 		matricula = "";
 		atrib = "";
@@ -19,23 +19,22 @@ public class Coche {
 		modelo = mo;
 		fabricante = f;
 	}
-		
-	public String metodo1() { //El metodo es poco descriptivo, el if siempre se rige por el mismo parametro (atrib) y el resultado es el mismo en todos los else if
-		// Demasiados else if, deberían cambiarse por un switch. 
-		//"El coche con matricula " + matricula + " "; se debería parametrizar
-		String resultado = "";
-		if (atrib == "Gasolina") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoA(modelo, fabricante);
-		} else if (atrib == "Diesel") {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += metodoB(modelo, fabricante);
-		} else if (atrib == "Híbrido") {
-			resultado += "El coche con matricula " + matricula + " ";
+	
+	public String metodo1() { //Aplicada la refactorizacion
+		String resultado = "El coche con matricula " + matricula + " ";
+		switch(atrib) {
+		case "Gasolina":
+		resultado += metodoA(modelo, fabricante);
+		break;
+		case "Diesel":
+		resultado += metodoB(modelo, fabricante);
+		break;
+		case "Híbrido":
 			resultado += metodoC(modelo, fabricante);
-		} else {
-			resultado += "El coche con matricula " + matricula + " ";
-			resultado += "no dispone de información";
+		break;
+		default:
+		resultado += "no dispone de información";
+		break;
 		}
 		return resultado;
 	}
