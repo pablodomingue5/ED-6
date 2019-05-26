@@ -53,6 +53,8 @@ public class Coche {
 	 * @return
 	 */
 	public String metodoC(String modelo3, String fabricante3) {
+		fabricante3 = "Hyundai";
+		modelo3 = "Getz";
 		String resultado="es un "+fabricante3+" "+modelo3+" y no necesita combustible.";
 		return resultado;
 	}
@@ -63,6 +65,8 @@ public class Coche {
 	 * @return
 	 */
 	public String metodoB(String modelo2, String fabricante2) {
+		fabricante2 = "Seat";
+		modelo2 = "Ibiza";
 		String resultado="es un "+fabricante2+" "+modelo2+" y gasta 1,052 euros por litro.";
 		return resultado;
 		
@@ -75,6 +79,8 @@ public class Coche {
 	 */
 
 	public String metodoA(String modelo, String fabricante) {
+		fabricante = "Opel";
+		modelo = "Corsa";
 		String resultado="es un "+fabricante+" "+modelo+" y gasta 1,337 euros por litro.";
 		return resultado;
 	}
