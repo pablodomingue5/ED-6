@@ -20,7 +20,9 @@ public class Coche {
 		fabricante = f;
 	}
 		
-	public String metodo1() {
+	public String metodo1() { //El metodo es poco descriptivo, el if siempre se rige por el mismo parametro (atrib) y el resultado es el mismo en todos los else if
+		// Demasiados else if, deberían cambiarse por un switch. 
+		//"El coche con matricula " + matricula + " "; se debería parametrizar
 		String resultado = "";
 		if (atrib == "Gasolina") {
 			resultado += "El coche con matricula " + matricula + " ";
